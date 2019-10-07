@@ -1,6 +1,7 @@
 export default [
 	{
 		id: 1,
+		quantity: 1,
 		title: 'The Art Of War',
 		price: 10.11,
 		image:
@@ -8,6 +9,7 @@ export default [
 	},
 	{
 		id: 2,
+		quantity: 1,
 		title: 'Civilization and Its Discontents',
 		price: 14.29,
 		image:
@@ -15,6 +17,7 @@ export default [
 	},
 	{
 		id: 3,
+		quantity: 1,
 		title: 'Influence: The Psychology of Persuasion',
 		price: 10.98,
 		image:
@@ -22,6 +25,7 @@ export default [
 	},
 	{
 		id: 4,
+		quantity: 1,
 		title: 'Grokking Algorithms',
 		price: 40.00,
 		image:
