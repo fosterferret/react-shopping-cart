@@ -11,10 +11,14 @@ import ShoppingCart from "./components/ShoppingCart";
 
 function App() {
   const [products] = useState(data);
-  const [cart, setCart] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []);
+  const [cart, setCart] = useState(
+    localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
+  );
 
   const addItem = item => {
-    setCart([...cart, item]);
+    if (!cart.find(cartItem => cartItem.id === item.id)) {
+      setCart([...cart, item]);
+    }
   };
 
   const removeItem = item => {
@@ -22,7 +26,7 @@ function App() {
   };
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   return (
